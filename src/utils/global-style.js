@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import normalize from './normalize';
 
 const GlobalStyle = createGlobalStyle`
-  /* Add Normalize.css before changing styles */
+  /* Include normalize.css first */
   ${normalize}
 
   html {
@@ -16,21 +16,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-size: 1em; /* TODO: Variable*/
-    line-height: 1.25; /* TODO: Variable*/
-    font-weight: 400; /* TODO: Variable*/
-    font-family: ${props => props.theme.fontTypes.body};
-    color: ${props => props.theme.colors.text};
+    font-size: 1em;
+    line-height: 1.25;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    background: ${props => props.theme.colors.background};
   }
 
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
-    margin-bottom: 2rem; /* TODO: Variable*/
+    margin-bottom: 2rem;
   }
 
   p {

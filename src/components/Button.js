@@ -3,7 +3,7 @@ import React from 'react';
 
 const ButtonDefault = styled.button`
   border: none;
-  background: ${props => props.theme.colors.blue};
+  background: ${props => props.theme.colors.primary400};
   color: #fff;
   font-size: 1em;
   margin: 1em;
@@ -12,7 +12,7 @@ const ButtonDefault = styled.button`
   font-weight: 500;
 
   :hover {
-    background: ${props => props.theme.colors.darkBlue};
+    background: ${props => props.theme.colors.primary500};
   }
 `;
 

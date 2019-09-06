@@ -1,47 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const H1 = styled.h1`
-  font-size: ${props => props.theme.fontSizes.h1};
-`;
+const getPrimaryFontFamily = props =>
+  `font-family: ${props.theme.typography.primaryFontFamily}`;
 
-const H2 = styled.h2`
-  font-size: ${props => props.theme.fontSizes.h2};
-`;
+const getFontSize = ({ theme, as }) =>
+  `font-size: ${theme.typography[as].fontSize}`;
 
-const H3 = styled.h3`
-  font-size: ${props => props.theme.fontSizes.h3};
-`;
+const getFontWeight = ({ theme, as }) =>
+  `font-weight: ${theme.typography[as].fontWeight}`;
 
-const H4 = styled.h4`
-  font-size: ${props => props.theme.fontSizes.h4};
-`;
+const getLineHeight = ({ theme, as }) =>
+  `line-height: ${theme.typography[as].lineHeight}`;
 
-const H5 = styled.h5`
-  font-size: ${props => props.theme.fontSizes.h5};
-`;
-
-const H6 = styled.h6`
-  font-size: ${props => props.theme.fontSizes.h6};
+const StyledTitle = styled.h1`
+  ${getPrimaryFontFamily}
+  ${getFontSize}
+  ${getFontWeight}
+  ${getLineHeight}
 `;
 
 function Title({ level, children }) {
-  switch (level) {
-    case 1:
-      return <H1>{children}</H1>;
-    case 2:
-      return <H2>{children}</H2>;
-    case 3:
-      return <H3>{children}</H3>;
-    case 4:
-      return <H4>{children}</H4>;
-    case 5:
-      return <H5>{children}</H5>;
-    case 6:
-      return <H6>{children}</H6>;
-    default:
-      return <H1>{children}</H1>;
-  }
+  return <StyledTitle as={`h${level}`}>{children}</StyledTitle>;
 }
 
 export default Title;
