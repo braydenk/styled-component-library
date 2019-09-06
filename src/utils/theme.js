@@ -75,7 +75,7 @@ const typography = {
     fontWeight: '500',
     lineHeight: '28px'
   },
-  text: {
+  p: {
     fontSize: '16px',
     fontWeight: 'normal',
     lineHeight: '24px'

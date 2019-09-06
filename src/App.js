@@ -1,6 +1,7 @@
 import React from 'react';
 import Page from './components/Page';
 import Title from './components/Title';
+import Text from './components/Text';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Title level={4}>Hello, World!</Title>
       <Title level={5}>Hello, World!</Title>
       <Title level={6}>Hello, World!</Title>
+      <Text>This is some paragraph text.</Text>
     </Page>
   );
 }
