@@ -20,14 +20,10 @@ const theme = {
     heading: 1.25
   },
   colors: {
-    text: 'hsl(0, 0%, 10%)',
-    background: '#fff',
-    primary: '',
-    secondary: '',
-    accent: '',
-    gray: '',
-    lightGray: '',
-    mediumGray: ''
+    white: '#fff',
+    black: 'hsl(0, 0%, 10%)',
+    blue: '#276ef1',
+    darkBlue: '#1e54b7'
   }
 };
 
