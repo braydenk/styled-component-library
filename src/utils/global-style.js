@@ -6,38 +6,73 @@ const GlobalStyle = createGlobalStyle`
   ${normalize}
 
   html {
+    background-color: ${props => props.theme.colors.background};
+    min-height: 100%;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+    color: #000;
+    font-feature-settings: "kern";
+    font-kerning: normal;
+    font-family: ${props => props.theme.typography.primaryFontFamily};
     font-size: 100%;
   }
 
-  html, body {
-    margin: 0;
+  /* For create-react-app */
+  body, #root {
     min-height: 100%;
-    height: 100%;
   }
 
-  body {
-    font-size: 1em;
-    line-height: 1.25;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+  * { font-weight: inherit; }
+
+  *,
+  *::before,
+  *::after { box-sizing: inherit; }
+
+  button {
+    cursor: pointer;
+    padding: 0;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 2rem;
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    line-height: inherit;
+    font-family: inherit;
   }
 
-  p {
-    margin-top: 0;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 { font-size: inherit; }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  dl,
+  dd,
+  ol,
+  ul,
+  fieldset,
+  figure,
+  hr {
+    margin: 0;
+    padding: 0;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+  img { max-width: 100%; }
+
+  svg { max-height: 100%; }
 `;
 
 export default GlobalStyle;

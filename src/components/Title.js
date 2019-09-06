@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const getPrimaryFontFamily = props =>
-  `font-family: ${props.theme.typography.primaryFontFamily}`;
-
 const getFontSize = ({ theme, as }) =>
   `font-size: ${theme.typography[as].fontSize}`;
 
@@ -14,7 +11,7 @@ const getLineHeight = ({ theme, as }) =>
   `line-height: ${theme.typography[as].lineHeight}`;
 
 const StyledTitle = styled.h1`
-  ${getPrimaryFontFamily}
+  font-family: ${props => props.theme.typography.primaryFontFamily};
   ${getFontSize}
   ${getFontWeight}
   ${getLineHeight}

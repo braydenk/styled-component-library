@@ -39,7 +39,7 @@ const colors = {
   fontSecondary: '', // neutral800
 
   // Background
-  background: 'hsl(0, 0%, 0%)' // neutral100
+  background: '#fff' // neutral100
 };
 
 const typography = {
