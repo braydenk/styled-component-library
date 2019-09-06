@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     box-sizing: border-box;
     font-size: 100%;
+    font-family: ${props => props.theme.fontStacks.sansSerif};
+    color: ${props => props.theme.colors.black};
   }
 
   *,
@@ -36,27 +38,21 @@ const theme = {
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
   },
   colors: {
-    neutralPalette: {
-      white: '#fff',
-      gray200: '#fafafa',
-      gray300: '#f5f5f5',
-      gray400: '#e8e8e8',
-      gray500: '#d9d9d9',
-      gray600: '#bfbfbf',
-      gray700: '#8c8c8c',
-      gray800: '#595959',
-      gray900: '#262626',
-      black: '#000'
-    }
+    accent: '#3d393f6',
+    black: 'hsl(0, 0%, 10%)',
+    gray: '#a7aeb4',
+    lightGray: '#e7e9eb'
   }
 };
 
 function Page({ children }) {
   return (
-    <>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyle />
+        {children}
+      </>
+    </ThemeProvider>
   );
 }
 

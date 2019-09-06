@@ -1,12 +1,15 @@
 import React from 'react';
 import Page from './components/Page';
 import Container from './components/Container';
+import Text from './components/Text';
+import Title from './components/Title';
 
 function App() {
   return (
     <Page>
-      <Container background={'tomato'} width="50%">
-        Container
+      <Container>
+        <Title>Hello World</Title>
+        <Text>Hello World</Text>
       </Container>
     </Page>
   );
