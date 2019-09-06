@@ -1,18 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// const ButtonOutlined = styled(ButtonDefault)`
-//   border: 1px solid ${props => props.theme.colors.blue};
-//   background: ${props => props.theme.colors.white};
-//   color: ${props => props.theme.colors.blue};
-//   font-weight: 500;
-
-//   :hover {
-//     background: ${props => props.theme.colors.blue};
-//     color: #fff;
-//   }
-// `;
-
 const StyledButtonDefault = styled.button`
   border: none;
   background: ${props => props.theme.colors.primary};

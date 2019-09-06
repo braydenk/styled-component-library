@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* For create-react-app */
   body, #root {
-    min-height: 100%;
+    min-height: 100vh;
   }
 
   * { font-weight: inherit; }

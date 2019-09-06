@@ -1,19 +1,15 @@
 import styled from 'styled-components';
 
+const width = props => `width: ${props.width}`;
+const padding = props => `padding: ${props.padding}`;
+const backgroundColor = props => `background-color: ${props.background}`;
+const display = props => `display: ${props.display}`;
+
 const Container = styled.div`
-  box-sizing: 'border-box';
-  min-width: 0;
-  width: ${props => props.width};
-  padding: ${props => props.padding};
-  background-color: ${props => props.background};
-`;
-
-export const FlexContainer = styled(Container)`
-  display: flex;
-`;
-
-export const GridContainer = styled(Container)`
-  display: grid;
+  ${width}
+  ${padding}
+  ${backgroundColor}
+  ${display}
 `;
 
 export default Container;
