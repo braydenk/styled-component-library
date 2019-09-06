@@ -1,11 +1,12 @@
 import React from 'react';
 import Page from './components/Page';
 import Button from './components/Button';
+import Link from './components/Link';
 
 function App() {
   return (
     <Page>
-      <Button variant="">Button</Button>
+      <Link href="xyz">Link</Link>
     </Page>
   );
 }
