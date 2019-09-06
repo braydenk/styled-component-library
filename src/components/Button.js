@@ -1,9 +1,21 @@
 import styled from 'styled-components';
 import React from 'react';
 
-const ButtonDefault = styled.button`
+// const ButtonOutlined = styled(ButtonDefault)`
+//   border: 1px solid ${props => props.theme.colors.blue};
+//   background: ${props => props.theme.colors.white};
+//   color: ${props => props.theme.colors.blue};
+//   font-weight: 500;
+
+//   :hover {
+//     background: ${props => props.theme.colors.blue};
+//     color: #fff;
+//   }
+// `;
+
+const StyledButtonDefault = styled.button`
   border: none;
-  background: ${props => props.theme.colors.primary400};
+  background: ${props => props.theme.colors.primary};
   color: #fff;
   font-size: 1em;
   margin: 1em;
@@ -12,31 +24,27 @@ const ButtonDefault = styled.button`
   font-weight: 500;
 
   :hover {
-    background: ${props => props.theme.colors.primary500};
+    background: ${props => props.theme.colors.primaryDark};
   }
 `;
 
-const ButtonOutlined = styled(ButtonDefault)`
-  border: 1px solid ${props => props.theme.colors.blue};
-  background: ${props => props.theme.colors.white};
-  color: ${props => props.theme.colors.blue};
-  font-weight: 500;
+const StyledButtonOutline = styled(StyledButtonDefault)`
+  border: 1px solid ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.white};
+  color: ${props => props.theme.colors.fontPrimary};
 
   :hover {
-    background: ${props => props.theme.colors.blue};
-    color: #fff;
+    background: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.white};
   }
 `;
 
 function Button({ variant, children }) {
-  switch (variant) {
-    case 'primary':
-      return <ButtonDefault>{children}</ButtonDefault>;
-    case 'outlined':
-      return <ButtonOutlined>{children}</ButtonOutlined>;
-    default:
-      return <ButtonDefault>{children}</ButtonDefault>;
+  if (variant === 'outlined') {
+    return <StyledButtonOutline>{children}</StyledButtonOutline>;
   }
+
+  return <StyledButtonDefault>{children}</StyledButtonDefault>;
 }
 
 export default Button;

@@ -1,45 +1,41 @@
 const colors = {
   // Primary Palette
-  primary300: '',
-  primary400: '#30c2ff',
-  primary500: '',
+  primaryLight: '#c5e4f9',
+  primary: '#30c2ff',
+  primaryDark: '#2288b3',
 
   // Error Palette
-  error300: '',
-  error400: '#FE8CB9', // #f24822
-  error500: '',
+  errorLight: '#fb8469',
+  error: '#ff7262',
+  errorDark: '#f24822',
 
   // Warning Palette
-  warning300: '',
-  warning400: '#E3B858',
-  warning500: '',
+  warning: '#ff6d30',
 
   // Success Palette
-  success300: '',
-  success400: 'rgb(62, 194, 143);',
-  success500: '',
+  successLight: '#00cf7f',
+  sucess: '#3ec28f',
+  successDark: '#19926d',
 
   // Neutrals Palette
-  white: 'hsl(0, 0%, 0%)',
-  neutral100: 'hsl(0, 0%, 0%)',
-  neutral200: 'hsl(0, 0%, 0%)',
-  neutral300: 'hsl(0, 0%, 0%)',
-  neutral400: 'hsl(0, 0%, 0%)',
-  neutral500: 'hsl(0, 0%, 0%)',
-  neutral600: 'hsl(0, 0%, 0%)',
-  neutral700: 'hsl(0, 0%, 0%)',
-  neutral800: 'hsl(0, 0%, 0%)',
-  neutral900: 'hsl(0, 0%, 0%)',
-  neutral1000: 'hsl(0, 0%, 0%)',
-  black: 'hsl(0, 0%, 100%)',
+  white: '#fff',
+  neutral100: '#fcfcfc',
+  neutral200: '#f8f8f8',
+  neutral300: '#efefef',
+  neutral400: '#d4d4d4',
+  neutral500: '#aaa',
+  neutral600: '#666',
+  neutral700: '#444',
+  neutral800: '#2c2c2c',
+  neutral900: '#050505',
+  black: '#000',
 
   // SYSTEM COLOURS
   // Font colour
-  fontPrimary: '', // neutral1000
-  fontSecondary: '', // neutral800
+  fontPrimary: '#050505',
 
   // Background
-  background: '#fff' // neutral100
+  background: '#fff'
 };
 
 const typography = {
