@@ -1,28 +1,37 @@
 import React from 'react';
 import Page from './components/Page';
-import Header from './components/Header';
-import Link from './components/Link';
+import Card from './components/Card';
 
-const navList = (
-  <ul>
-    <li>
-      <Link href="/">Home</Link>
-    </li>
-    <li>
-      <Link href="/">Blog</Link>
-    </li>
-    <li>
-      <Link href="/">Projects</Link>
-    </li>
-    <li>
-      <Link href="/">About</Link>
-    </li>
-  </ul>
-);
+// const navList = (
+//   <ul>
+//     <li>
+//       <Link href="/">Home</Link>
+//     </li>
+//     <li>
+//       <Link href="/">Blog</Link>
+//     </li>
+//     <li>
+//       <Link href="/">Projects</Link>
+//     </li>
+//     <li>
+//       <Link href="/">About</Link>
+//     </li>
+//   </ul>
+// );
 function App() {
   return (
     <Page>
-      <Header titleText="Demo Text" navList={navList} />
+      <div
+        style={{
+          display: 'flex',
+          width: '100%',
+          height: '100%',
+          justifyContent: 'center',
+          marginTop: '200px'
+        }}
+      >
+        <Card />
+      </div>
     </Page>
   );
 }

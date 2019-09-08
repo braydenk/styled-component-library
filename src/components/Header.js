@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Link from './Link';
-import Button from './Button';
 
 const HeaderStyles = styled.header`
   background-color: ${props => props.theme.colors.background};
