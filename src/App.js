@@ -1,16 +1,28 @@
 import React from 'react';
 import Page from './components/Page';
-import Grid from './components/Grid';
-import Container from './components/Container';
+import Header from './components/Header';
+import Link from './components/Link';
 
+const navList = (
+  <ul>
+    <li>
+      <Link href="/">Home</Link>
+    </li>
+    <li>
+      <Link href="/">Blog</Link>
+    </li>
+    <li>
+      <Link href="/">Projects</Link>
+    </li>
+    <li>
+      <Link href="/">About</Link>
+    </li>
+  </ul>
+);
 function App() {
   return (
     <Page>
-      <Grid rows={['1fr', '1fr', '1fr']} columns={['auto']} gap="10px">
-        <Container background="red">1</Container>
-        <Container background="red">2</Container>
-        <Container background="red">3</Container>
-      </Grid>
+      <Header titleText="Demo Text" navList={navList} />
     </Page>
   );
 }
