@@ -1,28 +1,10 @@
 import React from 'react';
 import Page from './components/Page';
-import Card from './components/Card';
-import Button from './components/Button';
 
-// const navList = (
-//   <ul>
-//     <li>
-//       <Link href="/">Home</Link>
-//     </li>
-//     <li>
-//       <Link href="/">Blog</Link>
-//     </li>
-//     <li>
-//       <Link href="/">Projects</Link>
-//     </li>
-//     <li>
-//       <Link href="/">About</Link>
-//     </li>
-//   </ul>
-// );
 function App() {
   return (
     <Page>
-      <div
+      {/* <div
         style={{
           display: 'flex',
           width: '100%',
@@ -30,9 +12,9 @@ function App() {
           justifyContent: 'center',
           marginTop: '200px'
         }}
-      >
-        <Card>Bleep</Card>
-      </div>
+      > */}
+
+      {/* </div> */}
     </Page>
   );
 }

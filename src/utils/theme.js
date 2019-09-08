@@ -33,6 +33,7 @@ const colors = {
   // SYSTEM COLOURS
   // Font colour
   fontPrimary: '#050505',
+  fontAlt: '#fff',
 
   // Background
   background: '#fff'
