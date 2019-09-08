@@ -1,6 +1,7 @@
 import React from 'react';
 import Page from './components/Page';
 import Card from './components/Card';
+import Button from './components/Button';
 
 // const navList = (
 //   <ul>
@@ -30,7 +31,7 @@ function App() {
           marginTop: '200px'
         }}
       >
-        <Card />
+        <Button primary>Bleep</Button>
       </div>
     </Page>
   );

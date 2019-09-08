@@ -1,38 +1,34 @@
 import styled from 'styled-components';
-import React from 'react';
 
-const StyledButtonDefault = styled.button`
-  border: none;
-  background: ${props => props.theme.colors.primary};
-  color: #fff;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.5em 1em;
-  border-radius: 4px;
-  font-weight: 500;
+const Button = styled.button`
+  background: ${props => (props.primary ? props.theme.colors.primary : '#fff')};
+  border: ${props =>
+    props.primary ? 'none' : `1px solid ${props.theme.colors.neutral500}`};
+  color: ${props => (props.primary ? '#fff' : props.theme.colors.fontPrimary)};
+  padding: 8px 16px;
+  margin: 8px;
+  font-size: 16px;
+
+  :disabled {
+    background-color: ${props => props.theme.colors.neutral400};
+    color: ${props => props.theme.colors.neutral700};
+    border: none;
+    cursor: not-allowed;
+
+    :hover {
+      color: ${props => props.theme.colors.neutral700};
+    }
+  }
 
   :hover {
-    background: ${props => props.theme.colors.primaryDark};
+    background: ${props =>
+      props.primary ? props.theme.colors.primary : '#fff'};
+    opacity: ${props => props.primary && '0.8'};
+    border: ${props =>
+      props.primary ? 'none' : `1px solid ${props.theme.colors.primary}`};
+    color: ${props =>
+      props.primary ? props.theme.colors.white : props.theme.colors.primary};
   }
 `;
-
-const StyledButtonOutline = styled(StyledButtonDefault)`
-  border: 1px solid ${props => props.theme.colors.primary};
-  background-color: ${props => props.theme.colors.white};
-  color: ${props => props.theme.colors.fontPrimary};
-
-  :hover {
-    background: ${props => props.theme.colors.primary};
-    color: ${props => props.theme.colors.white};
-  }
-`;
-
-function Button({ variant, children }) {
-  if (variant === 'outlined') {
-    return <StyledButtonOutline>{children}</StyledButtonOutline>;
-  }
-
-  return <StyledButtonDefault>{children}</StyledButtonDefault>;
-}
 
 export default Button;
