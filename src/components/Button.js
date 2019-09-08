@@ -7,7 +7,7 @@ const Button = styled.button`
   color: ${props => (props.primary ? '#fff' : props.theme.colors.fontPrimary)};
   padding: 8px 16px;
   margin: 8px;
-  font-size: 16px;
+  font-size: ${props => (props.small ? '14px' : '16px')};
 
   :disabled {
     background-color: ${props => props.theme.colors.neutral400};

@@ -5,26 +5,16 @@ import Button from './Button';
 const StyledCard = styled.div`
   background: ${props => props.theme.colors.background};
   border: 1px solid ${props => props.theme.colors.neutral400};
-  width: 300px;
-  height: 250px;
-  padding: 1em 2em;
-`;
-
-const CardHeader = styled.div`
-  width: 100%;
-  height: 25%;
+  max-width: 300px;
   display: flex;
+  flex-direction: column;
 `;
 
 const P = styled.span`
-  height: 48px;
-  width: 48px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
-  background: gray;
-`;
-
-const CardHeaderTitle = styled.h1`
-  font-size: 20px;
+  background: ${props => props.theme.colors.neutral400};
 `;
 
 const CardHeaderSubTitle = styled.h1`
@@ -38,50 +28,55 @@ const CardHeaderTextContainer = styled.div`
   margin-left: 1em;
 `;
 
-const CardBody = styled.div`
-  margin-top: 1em;
-`;
-
-const CardActions = styled.div`
+const CardHeaderContainer = styled.div`
+  height: 30%;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
   margin-top: 1em;
 `;
 
-const CardActionButton = styled.button`
-  border: none;
-  background: ${props => props.theme.colors.primary};
-  color: #fff;
-  font-size: 1em;
-  max-height: 40px;
-  padding: 0.5em 1em;
-  border-radius: 4px;
-  font-weight: 500;
+const CardBodyContainer = styled.div`
+  height: 50%;
+  padding: 0.5em 1.5em;
+`;
 
-  :hover {
-    background: ${props => props.theme.colors.primaryDark};
-  }
+const CardActionsContainer = styled.div`
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+  margin-bottom: 1em;
+`;
+
+const CardHeaderTitle = styled.h1`
+  font-size: 20px;
 `;
 
 function Card() {
   return (
     <StyledCard>
-      <CardHeader>
+      <CardHeaderContainer>
         <P />
         <CardHeaderTextContainer>
-          <CardHeaderTitle>Title text</CardHeaderTitle>
+          <CardHeaderTitle>Title</CardHeaderTitle>
           <CardHeaderSubTitle>Secondary Text</CardHeaderSubTitle>
         </CardHeaderTextContainer>
-      </CardHeader>
-      <CardBody>
+      </CardHeaderContainer>
+      <CardBodyContainer>
         <p>
           This is the card body text, it can go for around 4 sentences at max.
         </p>
-      </CardBody>
-      <CardActions>
-        <CardActionButton>Button</CardActionButton>
-        <CardActionButton>Button</CardActionButton>
-      </CardActions>
+      </CardBodyContainer>
+      <CardActionsContainer>
+        <Button primary small>
+          Button
+        </Button>
+        <Button primary small>
+          Button
+        </Button>
+      </CardActionsContainer>
     </StyledCard>
   );
 }

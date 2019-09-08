@@ -31,7 +31,7 @@ function App() {
           marginTop: '200px'
         }}
       >
-        <Button primary>Bleep</Button>
+        <Card>Bleep</Card>
       </div>
     </Page>
   );
