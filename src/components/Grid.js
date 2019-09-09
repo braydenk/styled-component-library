@@ -1,20 +1,12 @@
 import styled from 'styled-components';
-import React from 'react';
 
-const StyledGrid = styled.div`
-  background: cornflowerblue;
+const Grid = styled.div`
   display: grid;
+  grid-template-columns: ${props => props.columns};
+  grid-template-rows: ${props => props.rows};
   grid-gap: ${props => props.gap};
-  grid-template-columns: ${props => props.columns.join(' ')};
-  grid-template-rows: ${props => props.rows.join(' ')};
+  grid-template-areas: ${props => props.areas};
+  height: ${props => props.height};
 `;
-
-function Grid({ rows = [], columns = [], gap = 0, children }) {
-  return (
-    <StyledGrid rows={rows} columns={columns} gap={gap}>
-      {children}
-    </StyledGrid>
-  );
-}
 
 export default Grid;
