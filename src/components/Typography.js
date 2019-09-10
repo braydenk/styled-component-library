@@ -1,15 +1,21 @@
 import styled from 'styled-components';
 
 export const Title = styled.h1`
-  font-family: ${props => props.theme.typography.primaryFontFamily};
-  font-size: ${props => props.theme.typography[`h${props.level}`].fontSize};
-  font-weight: ${props => props.theme.typography[`h${props.level}`].fontWeight};
-  line-height: ${props => props.theme.typography[`h${props.level}`].lineHeight};
+  font-family: ${props => props.theme.typography.fonts.primary};
+  font-size: ${props =>
+    props.theme.typography.fontSizes[
+      props.theme.typography.fontSizes.length - props.level
+    ]}px;
+  font-weight: ${props => props.theme.typography.fontWeights.normal};
+  line-height: ${props => props.theme.typography.lineHeights.default};
 `;
 
 export const Paragraph = styled.p`
-  font-family: ${props => props.theme.typography.primaryFontFamily};
-  font-size: ${props => props.theme.typography.p.fontSize};
-  font-weight: ${props => props.theme.typography.p.fontWeight};
-  line-height: ${props => props.theme.typography.p.lineHeight};
+  font-family: ${props => props.theme.typography.primary};
+  font-size: ${props =>
+    props.theme.typography.fontSizes[
+      props.theme.typography.fontSizes.length - props.level
+    ]}px;
+  font-weight: ${props => props.theme.typography.fontWeights.normal};
+  line-height: ${props => props.theme.typography.lineHeights.default};
 `;

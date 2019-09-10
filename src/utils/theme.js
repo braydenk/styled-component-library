@@ -40,53 +40,28 @@ const colors = {
 };
 
 const typography = {
-  primaryFontFamily:
-    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-  h1: {
-    fontSize: '72px',
-    fontWeight: 'normal',
-    lineHeight: '96px'
+  fonts: {
+    primary:
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+    mono:
+      'SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace'
   },
-  h2: {
-    fontSize: '52px',
-    fontWeight: '500',
-    lineHeight: '68px'
+  fontSizes: [12, 14, 16, 20, 24, 32, 40, 48],
+  fontWeights: {
+    light: 300,
+    normal: 400,
+    bold: 600
   },
-  h3: {
-    fontSize: '40px',
-    fontWeight: '500',
-    lineHeight: '56px'
-  },
-  h4: {
-    fontSize: '32px',
-    fontWeight: '500',
-    lineHeight: '48px'
-  },
-  h5: {
-    fontSize: '24px',
-    fontWeight: '500',
-    lineHeight: '36px'
-  },
-  h6: {
-    fontSize: '20px',
-    fontWeight: '500',
-    lineHeight: '28px'
-  },
-  p: {
-    fontSize: '16px',
-    fontWeight: 'normal',
-    lineHeight: '24px'
-  },
-  textSmall: {
-    fontSize: '14px',
-    fontWeight: 'normal',
-    lineHeight: '20px'
+  lineHeights: {
+    condensed: 1.25,
+    default: 1.5
   }
 };
 
 const theme = {
-  colors: { ...colors },
-  typography: { ...typography }
+  typography,
+  colors: { ...colors }
+  // typography: { ...typography }
 };
 
 export default theme;

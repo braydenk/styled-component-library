@@ -1,20 +1,13 @@
 import React from 'react';
 import Page from './components/Page';
+import { Title } from './components/Typography';
+import styled from 'styled-components';
 
 function App() {
+  console.log(styled);
   return (
     <Page>
-      {/* <div
-        style={{
-          display: 'flex',
-          width: '100%',
-          height: '100%',
-          justifyContent: 'center',
-          marginTop: '200px'
-        }}
-      > */}
-
-      {/* </div> */}
+      <Title level={1}>Title text</Title>
     </Page>
   );
 }

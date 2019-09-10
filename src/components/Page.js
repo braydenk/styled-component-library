@@ -4,6 +4,7 @@ import GlobalStyle from '../utils/global-style';
 import theme from '../utils/theme';
 
 function Page({ children }) {
+  console.log(theme);
   return (
     <ThemeProvider theme={theme}>
       <>
