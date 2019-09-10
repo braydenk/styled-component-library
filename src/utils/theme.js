@@ -7,7 +7,7 @@ const colors = {
   yellow: '#ffdb29',
   black: '#000',
   white: '#fff',
-  gray: [],
+  gray: '#efefef',
   text: '#050505'
 };
 
