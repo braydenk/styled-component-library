@@ -1,42 +1,14 @@
 const colors = {
-  // Primary Palette
-  primaryLight: '#c5e4f9',
-  primary: '#30c2ff',
-  primaryDark: '#2288b3',
-
-  // Error Palette
-  errorLight: '#fb8469',
-  error: '#ff7262',
-  errorDark: '#f24822',
-
-  // Warning Palette
-  warning: '#ff6d30',
-
-  // Success Palette
-  successLight: '#00cf7f',
-  sucess: '#3ec28f',
-  successDark: '#19926d',
-
-  // Neutrals Palette
-  white: '#fff',
-  neutral100: '#fcfcfc',
-  neutral200: '#f8f8f8',
-  neutral300: '#efefef',
-  neutral400: '#d4d4d4',
-  neutral500: '#aaa',
-  neutral600: '#666',
-  neutral700: '#444',
-  neutral800: '#2c2c2c',
-  neutral900: '#050505',
+  blue: '#30c2ff',
+  green: '#3ec28f',
+  orange: '#ff6d30',
+  purple: '#907cff',
+  red: '#ff7262',
+  yellow: '#ffdb29',
   black: '#000',
-
-  // SYSTEM COLOURS
-  // Font colour
-  fontPrimary: '#050505',
-  fontAlt: '#fff',
-
-  // Background
-  background: '#fff'
+  white: '#fff',
+  gray: [],
+  text: '#050505'
 };
 
 const typography = {
@@ -60,8 +32,8 @@ const typography = {
 
 const theme = {
   typography,
-  colors: { ...colors }
-  // typography: { ...typography }
+  colors,
+  space: [0, 4, 8, 16, 24, 32, 40, 48, 64, 80, 96, 112, 128]
 };
 
 export default theme;

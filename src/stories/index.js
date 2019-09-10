@@ -4,6 +4,7 @@ import Page from '../components/Page';
 import { Title } from '../components/Typography';
 import Grid from '../components/Grid';
 import GridItem from '../components/GridItem';
+import Box from '../components/Box';
 
 storiesOf('Fundamentals', module)
   .add('Typography', () => (
@@ -60,31 +61,12 @@ storiesOf('Fundamentals', module)
     <Page>
       <Grid columns="100px 1fr 100px" height="100vh">
         <GridItem columnStart="2">
-          <div
-            style={{ marginTop: '1em', padding: '1em', background: '#0facf3' }}
-          />
-          <div
-            style={{
-              marginTop: '1em',
-              padding: '1em',
-              background: '#3be8b0'
-            }}
-          />
-          <div
-            style={{
-              marginTop: '1em',
-              padding: '1em',
-              background: '#ffb900'
-            }}
-          />
-
-          <div
-            style={{
-              marginTop: '1em',
-              padding: '1em',
-              background: '#fc636b'
-            }}
-          />
+          <Box height={8} width={16} background="blue" />
+          <Box height={8} width={16} background="green" />
+          <Box height={8} width={16} background="orange" />
+          <Box height={8} width={16} background="purple" />
+          <Box height={8} width={16} background="red" />
+          <Box height={8} width={16} background="yellow" />
         </GridItem>
       </Grid>
     </Page>

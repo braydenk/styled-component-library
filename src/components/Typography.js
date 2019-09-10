@@ -8,6 +8,7 @@ export const Title = styled.h1`
     ]}px;
   font-weight: ${props => props.theme.typography.fontWeights.normal};
   line-height: ${props => props.theme.typography.lineHeights.default};
+  color: ${props => props.theme.colors.text};
 `;
 
 export const Paragraph = styled.p`
